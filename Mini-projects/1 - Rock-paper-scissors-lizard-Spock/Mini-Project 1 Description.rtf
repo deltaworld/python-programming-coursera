@@ -1,0 +1,209 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red255\green255\blue255;\red16\green113\blue198;
+\red207\green0\blue52;\red245\green245\blue248;\red242\green242\blue242;\red235\green235\blue235;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl840\sa200
+
+\f0\b\fs40 \cf2 \cb3 Mini-project description \'97 Rock-paper-scissors-lizard-Spock\
+\pard\pardeftab720\sl420\sa200
+
+\b0\fs28 \cf2 Rock-paper-scissors is a hand game that is played by two people. The players count to three in unison and simultaneously &ldqup;throw\'94 one of three hand signals that correspond to rock, paper or scissors. The winner is determined by the rules:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl420
+\ls1\ilvl0\cf2 {\listtext	\'95	}Rock smashes scissors\
+{\listtext	\'95	}Scissors cuts paper\
+{\listtext	\'95	}Paper covers rock\
+\pard\pardeftab720\sl420\sa200
+\cf2 Rock-paper-scissors is a surprisingly popular game that many people play seriously (see the {\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Rock_paper_scissors"}}{\fldrslt \cf4 Wikipedia article}} for details). Due to the fact that a tie happens around 1/3 of the time, several variants of Rock-Paper-Scissors exist that include more choices to make ties more unlikely.\
+Rock-paper-scissors-lizard-Spock (RPSLS) is a variant of Rock-paper-scissors that allows five choices. Each choice wins against two other choices, loses against two other choices and ties against itself. Much of RPSLS's popularity is that it has been featured in 3 episodes of the TV series "The Big Bang Theory". The {\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock"}}{\fldrslt \cf4 Wikipedia entry}} for RPSLS gives the complete description of the details of the game.\
+In our first mini-project, we will build a Python function 
+\f1\fs24 \cf5 \cb6 rpsls(name)
+\f0\fs28 \cf2 \cb3  that takes as input the string 
+\f1\fs24 \cf5 \cb6 name
+\f0\fs28 \cf2 \cb3 , which is one of 
+\f1\fs24 \cf5 \cb6 "rock"
+\f0\fs28 \cf2 \cb3 , 
+\f1\fs24 \cf5 \cb6 "paper"
+\f0\fs28 \cf2 \cb3 , 
+\f1\fs24 \cf5 \cb6 "scissors"
+\f0\fs28 \cf2 \cb3 ,
+\f1\fs24 \cf5 \cb6 "lizard"
+\f0\fs28 \cf2 \cb3 , or 
+\f1\fs24 \cf5 \cb6 "Spock"
+\f0\fs28 \cf2 \cb3 . The function then simulates playing a round of Rock-paper-scissors-lizard-Spock by generating its own random choice from these alternatives and then determining the winner using a simple rule that we will next describe.\
+While Rock-paper-scissor-lizard-Spock has a set of ten rules that logically determine who wins a round of RPSLS, coding up these rules would require a large number (5x5=25) of 
+\f1\fs24 \cf5 \cb6 if
+\f0\fs28 \cf2 \cb3 /
+\f1\fs24 \cf5 \cb6 elif
+\f0\fs28 \cf2 \cb3 /
+\f1\fs24 \cf5 \cb6 else
+\f0\fs28 \cf2 \cb3  clauses in your mini-project code. A simpler method for determining the winner is to assign each of the five choices a number:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl420
+\ls2\ilvl0\cf2 {\listtext	\'95	}0 \'97 rock\
+{\listtext	\'95	}1 \'97 Spock\
+{\listtext	\'95	}2 \'97 paper\
+{\listtext	\'95	}3 \'97 lizard\
+{\listtext	\'95	}4 \'97 scissors\
+\pard\pardeftab720\sl420\sa200
+\cf2 In this expanded list, each choice wins against the preceding two choices and loses against the following two choices. In all of the mini-projects for this class, I will provide a walk through of the steps involved in building your project to aid its development. A template for your mini-project is {\field{\*\fldinst{HYPERLINK "http://www.codeskulptor.org/#examples-rpsls_template.py"}}{\fldrslt 
+\b \cf4 available here}}. Please work from this template.\
+\pard\pardeftab720\sl840\sa200
+
+\b\fs32 \cf2 Mini-project development process\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl420
+\ls3\ilvl0
+\b0\fs28 \cf2 {\listtext	1.	}Build a helper function 
+\f1\fs24 \cf5 \cb6 name_to_number(name)
+\f0\fs28 \cf2 \cb3  that converts the string 
+\f1\fs24 \cf5 \cb6 name
+\f0\fs28 \cf2 \cb3  into a number between 0 and 4 as described above. This function should use a sequence of 
+\f1\fs24 \cf5 \cb6 if
+\f0\fs28 \cf2 \cb3 /
+\f1\fs24 \cf5 \cb6 elif
+\f0\fs28 \cf2 \cb3 /
+\f1\fs24 \cf5 \cb6 else
+\f0\fs28 \cf2 \cb3  clauses. You can use conditions of the form 
+\f1\fs24 \cf5 \cb6 name == 'paper'
+\f0\fs28 \cf2 \cb3 , etc. to distinguish the cases.To make debugging your code easier, we suggest including a final 
+\f1\fs24 \cf5 \cb6 else
+\f0\fs28 \cf2 \cb3  clause that catches cases when 
+\f1\fs24 \cf5 \cb6 name
+\f0\fs28 \cf2 \cb3  does not match any of the five correct input strings and prints an appropriate error message.\
+{\listtext	2.	}Next, you should build a second helper function 
+\f1\fs24 \cf5 \cb6 number_to_name(num)
+\f0\fs28 \cf2 \cb3  that converts a number in the range 0 to 4 into its corresponding name as a string. Again, we suggest including a final 
+\f1\fs24 \cf5 \cb6 else
+\f0\fs28 \cf2 \cb3  clause that catches cases when 
+\f1\fs24 \cf5 \cb6 number
+\f0\fs28 \cf2 \cb3  is not in the correct range.\
+{\listtext	3.	}Build the first part of the main function 
+\f1\fs24 \cf5 \cb6 rpsls(name)
+\f0\fs28 \cf2 \cb3  that converts 
+\f1\fs24 \cf5 \cb6 name
+\f0\fs28 \cf2 \cb3  into the number 
+\f1\fs24 \cf5 \cb6 player_number
+\f0\fs28 \cf2 \cb3  between 0 and 4 using the helper function
+\f1\fs24 \cf5 \cb6 name_to_number
+\f0\fs28 \cf2 \cb3 .\
+{\listtext	4.	}Build the second part of 
+\f1\fs24 \cf5 \cb6 rpsls(name)
+\f0\fs28 \cf2 \cb3  that generates a random number 
+\f1\fs24 \cf5 \cb6 comp_number
+\f0\fs28 \cf2 \cb3  between 0 and 4 using the function 
+\f1\fs24 \cf5 \cb6 random.randrange()
+\f0\fs28 \cf2 \cb3 . I suggest experimenting with 
+\f1\fs24 \cf5 \cb6 randrange
+\f0\fs28 \cf2 \cb3  in a separate CodeSkulptor window before deciding on how to call it to make sure that you do not accidently generate numbers in the wrong range.\
+{\listtext	5.	}Build the last part of 
+\f1\fs24 \cf5 \cb6 rpsls(name)
+\f0\fs28 \cf2 \cb3  that determines and prints out the winner. This test is actually very simple if you apply modular arithmetic (
+\f1\fs24 \cf5 \cb6 %
+\f0\fs28 \cf2 \cb3  in Python) to the difference between 
+\f1\fs24 \cf5 \cb6 comp_number
+\f0\fs28 \cf2 \cb3  and 
+\f1\fs24 \cf5 \cb6 player_number
+\f0\fs28 \cf2 \cb3 . If this is not immediately obvious to you, I would suggest reviewing our discussion of remainder and modular arithmetic and experimenting with the remainder operator 
+\f1\fs24 \cf5 \cb6 %
+\f0\fs28 \cf2 \cb3  in a separate CodeSkulptor window to understand its behavior.\
+{\listtext	6.	}Using the helper function 
+\f1\fs24 \cf5 \cb6 number_to_name
+\f0\fs28 \cf2 \cb3 , you should produce four 
+\f1\fs24 \cf5 \cb6 print
+\f0\fs28 \cf2 \cb3  statements; print a blank line, print out the player's choice, print out the computer's choice and print out the winner.\
+\pard\pardeftab720\sl420\sa200
+\cf2 This will be the only mini-project in the class that is not an interactive game. Since we have not yet learned enough to allow you to play the game interactively, you will simply call your 
+\f1\fs24 \cf5 \cb6 rpsls
+\f0\fs28 \cf2 \cb3  function repeatedly in the program with different player choices. You will see that we have provided five such calls at the bottom of the template. Running your program repeatedly should generate different computer guesses and different winners each time. While you are testing, feel free to modify those calls, but make sure they are restored when you hand in your mini-project, as your peer assessors will expect them to be there.\
+The output of running your program should have the following form:\
+\pard\pardeftab720\sl420
+
+\f1\fs26 \cf2 \cb7 Player chooses rock\
+Computer chooses scissors\
+Player wins!\
+\
+Player chooses Spock\
+Computer chooses lizard\
+Computer wins!\
+\
+Player chooses paper\
+Computer chooses lizard\
+Computer wins!\
+\
+Player chooses lizard\
+Computer chooses scissors\
+Computer wins!\
+\
+Player chooses scissors\
+Computer chooses Spock\
+Computer wins!\
+\pard\pardeftab720\sl420\sa200
+
+\f0\fs28 \cf2 \cb3 Note that, for this initial mini-project, we will focus only on testing whether your implementation of 
+\f1\fs24 \cf5 \cb6 rpsls()
+\f0\fs28 \cf2 \cb3  works correctly on valid input.\
+\pard\pardeftab720\sl840\sa200
+
+\b\fs32 \cf2 Grading rubric \'97 18 pts total (scaled to 100 pts)\
+\pard\pardeftab720\sl420\sa200
+
+\b0\fs28 \cf2 Your peers will assess your mini-project according to the rubric given below. To guide you in determining whether your project satisfies each item in the rubric, please consult the video that demonstrates our implementation of "Rock-paper-scissors-lizard-Spock". Small deviations from the textual output of our implementation are fine. You should avoid large deviations (such as using the Python function 
+\f1\fs24 \cf5 \cb6 input
+\f0\fs28 \cf2 \cb3  to input your guesses). Whether moderate deviations satisfy an item of the grading rubric is at your peers' discretion during their assessment.\
+Here is a break down of the scoring:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl420
+\ls4\ilvl0\cf2 {\listtext	\'95	}2 pts \'97 A valid CodeSkulptor URL was submitted. Give no credit if solution code was pasted into the submission field. Give 1 pt if an invalid CodeSkulptor URL was submitted.\
+{\listtext	\'95	}2 pts \'97 Program implements the function 
+\f1\fs24 \cf5 \cb6 rpsls()
+\f0\fs28 \cf2 \cb3  and the helper functions 
+\f1\fs24 \cf5 \cb6 name_to_number()
+\f0\fs28 \cf2 \cb3  with plausible code. Give partial credit of 1 pt if only the function 
+\f1\fs24 \cf5 \cb6 rpsls()
+\f0\fs28 \cf2 \cb3  has plausible code.\
+{\listtext	\'95	}1 pt \'97 Running program does not throw an error.\
+{\listtext	\'95	}1 pt \'97 Program prints blank lines between games.\
+{\listtext	\'95	}2 pts \'97 Program prints 
+\f1\fs24 \cf5 \cb6 "Player chooses player_guess"
+\f0\fs28 \cf2 \cb3  where 
+\f1\fs24 \cf5 \cb6 player_guess
+\f0\fs28 \cf2 \cb3  is a string of the form 
+\f1\fs24 \cf5 \cb6 "rock"
+\f0\fs28 \cf2 \cb3 , 
+\f1\fs24 \cf5 \cb6 "paper"
+\f0\fs28 \cf2 \cb3 , 
+\f1\fs24 \cf5 \cb6 "scissors"
+\f0\fs28 \cf2 \cb3 , 
+\f1\fs24 \cf5 \cb6 "lizard"
+\f0\fs28 \cf2 \cb3  or
+\f1\fs24 \cf5 \cb6 "Spock"
+\f0\fs28 \cf2 \cb3 . Give 1 pt if program prints out number instead of string.\
+{\listtext	\'95	}2 pts \'97 Program prints 
+\f1\fs24 \cf5 \cb6 "Computer chooses computer_guess"
+\f0\fs28 \cf2 \cb3  where 
+\f1\fs24 \cf5 \cb6 computer_guess
+\f0\fs28 \cf2 \cb3  is a string of the form 
+\f1\fs24 \cf5 \cb6 "rock", "paper", "scissors", "lizard"
+\f0\fs28 \cf2 \cb3  or 
+\f1\fs24 \cf5 \cb6 "Spock"
+\f0\fs28 \cf2 \cb3 . Give 1 pt if program prints out number instead of string.\
+{\listtext	\'95	}1 pt \'97 Computer's guesses vary between five calls to 
+\f1\fs24 \cf5 \cb6 rpsls()
+\f0\fs28 \cf2 \cb3  in each run of the program.\
+{\listtext	\'95	}1 pt \'97 Computer's guesses vary between runs of the program.\
+{\listtext	\'95	}3 pts \'97 Program prints either 
+\f1\fs24 \cf5 \cb6 "Player and computer tie!"
+\f0\fs28 \cf2 \cb3 , 
+\f1\fs24 \cf5 \cb6 "Player wins!"
+\f0\fs28 \cf2 \cb3  or 
+\f1\fs24 \cf5 \cb6 "Computer wins!"
+\f0\fs28 \cf2 \cb3  to report outcome. (1 pt for each message.)\
+{\listtext	\'95	}3 pts \'97 Program chooses correct winner according to RPSLS rules. Please manually examine 5 cases for correctness. If all five cases are correct, award 3 pts; four cases correct award 2 pts; one to three cases correct award 1 pt; no cases correct award 0 pts.\
+\pard\pardeftab720\sl420\sa200
+\cf2 \cb8 In the submission phase, cut and paste the URL for your cloud-saved mini-project into the box below. Hit the "Submit for grading" button when you are ready to submit your mini-project.\
+When evaluating, copy and paste the link above into a new browser tab, to load your peer's program into CodeSkulptor. Evaluate your peer's program according to the rubric below and hit "Submit" when your evaluation is complete.\
+}
